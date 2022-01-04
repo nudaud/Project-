@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<!-- The filename of this site is data.html
+     The purpose of this page is to show the data that was entered in the inde.html page using javascript.
+     My name is Nur Daud and my email is nudaud@stpeterschools.org
+     It was written on 11/19/2021
+     It was revised on 11/19/2021 11/23/2021 -->
+
+<head>
+	<meta charset="UTF-8">
+	<title>data</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<style>
+	    .margin {
+		margin-top: 100px;
+	    }
+	</style>
+</head>
+<body class="text-dark">
+   <div class="col col-12">
+	<nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top">
+            	<h1 class="navbar-brand"><a class="nav-link" href="index.html">BACK</a></h1>
+        </nav>
+   </div>
+   <div class="margin">
+   <div class="col-sm-3 col-md-6 col-lg-4"></div>
+   <div class="col-sm-3 col-md-6 col-lg-12">
+	<h1>Here is your collected data</h1>
+	<div id="data"></div>
+	<div id="dataTwo"></div>
+	<div id="dataThree"></div>
+	<script>
+        var array = [];
+	array = ["username", "password", "email", "age", "birthday", "hobby", "bio", "hidden message", "phone number", "url"];
+        var x = new URLSearchParams(document.location.search.substring(1));
+	var y = x.get("username");
+	var z = x.get("password");
+	var a = x.get("email");
+	var b = parseInt(x.get("age"), 10);
+	var bb = parseInt(x.get("age"), 10);
+	if(b == bb) {
+	b = parseInt(x.get("age"), 10);
+	}
+	else {
+	b = " ";
+	}
+	var c = x.get("date");
+	var d = x.get("gender");
+	var e = x.get("day");
+	var f = x.get("bio");
+	var g = x.get("hidden");
+	var h = x.get("phone");
+	var i = x.get("url");
+	var arrayss = [];
+	arrayss = [y, z, a, b, c, e, f, g, h, i];
+        var count = [];
+	for(var t=0; t < array.length; t++) {
+        count.push(array[t] + ": <strong>" + arrayss[t] + "</strong> <br>");
+	}
+	var results = "";
+	for (var s = 0; s < count.length; s++) { 
+        results += count[s]; 
+        }
+	var r = "";
+	r = results;
+	document.getElementById("data").innerHTML = r;
+	var run = x.get("run");	
+	var basket = x.get("basket");
+	var walk = x.get("walk");
+	if(walk == "on") {
+	if(run == "on") {
+	if(basket == "on") {
+	document.getElementById("dataTwo").innerHTML = "physical activity:<strong> walking, running and playing basketball</strong>";
+	}
+	else {
+	document.getElementById("dataTwo").innerHTML = "physical activity:<strong> walking and running</strong>";
+	}
+	}
+	else {
+	if(basket == "on") {
+	document.getElementById("dataTwo").innerHTML = "physical activity:<strong> walking and playing basketball</strong>";
+	}
+	else {
+	document.getElementById("dataTwo").innerHTML = "physical activity:<strong> walking</strong>";
+	}
+	}
+	}
+	else {
+	if(run == "on") {
+		if(basket == "on") {
+		document.getElementById("dataTwo").innerHTML = "physical activity:<strong> running and playing basketball</strong>";
+		}
+		else {
+		document.getElementById("dataTwo").innerHTML = "physical activity:<strong> running</strong>";
+		}
+	}
+	else {
+	if(basket == "on") {
+	document.getElementById("dataTwo").innerHTML = "physical activity:<strong> playing basketball</strong>";
+	}
+	else {
+	document.getElementById("dataTwo").innerHTML = "physical activity:";
+	}
+ 	}
+	}
+	if(d == null) {
+	document.getElementById("dataThree").innerHTML = "gender:";
+	}
+	else {
+	document.getElementById("dataThree").innerHTML = "gender: <strong>" + d + "</strong>";
+	}
+	</script>
+	</div>
+	</div>
+</body>
+</html>

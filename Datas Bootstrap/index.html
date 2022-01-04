@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<!-- The filename of this site is index.html
+     The purpose of this page is to have a registration part for someone to create an account, and once the right info is entered,
+     it will redirect to a different webpage that shows th entered data.
+     My name is Nur Daud and my email is nudaud@stpeterschools.org
+     It was written on 11/19/2021
+     It was revised on 11/19/2021 11/23/2021 -->
+<head>
+	<meta charset="UTF-8">
+	<title>register</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body class="bg-light text-dark text-dark font-weight-bold">
+   <div class="col-sm-3 col-md-6 col-lg-4"></div>
+   <div class="col-sm-3 col-md-6 col-lg-12">
+   <h1>Please Fill out the form to register for the hospital</h1>
+   <form action="data.html" method="GET">
+     <div class="form-group">
+	<label for="user">Create Username:</label>
+  	<input type="text" id="user" class="form-control" name="username" value="mayo" required>
+     </div>
+     <div class="form-group">
+  	<label for="pass">Create Password:</label>
+  	<input type="password" class="form-control" id="pass" name="password" value="Please99" required>
+     </div>
+     <div class="form-group">
+    	<label for="email">Email:</label>
+    	<input type="email" class="form-control" name="email" id="email">
+     </div>
+     <div class="form-group">
+    	<label for="age">Your Age:</label>
+    	<input type="number" name="age" id="age">
+     </div>
+     <div class="form-group">
+    	<label for="date">Birthdate</label>
+    	<input type="date" name="date" id="date">
+     </div>
+     <div class="form-group form-check">
+    	Physical Activity
+    	<div>
+      	   <label for="walk" class="form-check-label">
+      	   <input type="checkbox" class="form-check-input" name="walk" id="walk"> Walking</label>
+    	</div>
+    	<div>
+      	   <label for="basket" class="form-check-label">
+      	   <input type="checkbox" class="form-check-input" name="basket" id="basket"> Basketball</label>
+	   
+    	</div>
+    	<div>
+      	   <label for="run" class="form-check-label">
+      	   <input type="checkbox" class="form-check-input" name="run" id="run"> Running</label>
+    	</div>
+     </div>
+     <div class="form-group">
+    	Please Specify Your Gender
+    	<div>
+      	   <label for="male">-Male</label>
+      	   <input type="radio" name="gender" id="male" value="male">
+    	</div>
+    	<div>
+      	   <label for="female">-Female</label>
+      	   <input type="radio" name="gender" id="female" value="female">
+    	</div>
+     </div>
+     <div class="form-group">
+    	<label for="day">What do you do most of the day</label>
+    	<select name="day" id="day">
+      	   <option value="working">Work</option>
+      	   <option value="sleeping">Sleep</option>
+      	   <option value="playing a game">Games</option>
+      	   <option value="doing schoolwork">School work</option>
+    	</select>
+     </div>
+     <div class="form-group">
+    	<label for="bio">Tell us more about yourself</label><br>
+    	<textarea id="bio" class="form-control" name="bio"></textarea>
+     </div>
+  	<input type="hidden" name="hidden" value="hidden value">
+     <div class="form-group">
+    	<label for="phone">Phone</label>
+    	<input type="tel" name="phone" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+     </div>
+     <div class="form-group">
+    	<label for="url">What website did you learn about us</label>
+	<input type="url" class="form-control" name="url" id="url">
+     </div>
+     <button type="reset" class="btn btn-primary">Reset</button>
+     <button type="submit" onclick="render()" class="btn btn-primary">Submit</button>
+   </form>
+   </div>
+   <div class="col-sm-3 col-md-6 col-lg-2"></div>
+</body>
+</html>
